@@ -20,3 +20,6 @@ Postman
 ===
 * Inventory search by id, material name, stok (stock_from)
 
+Database Name
+===
+* inventory_app
