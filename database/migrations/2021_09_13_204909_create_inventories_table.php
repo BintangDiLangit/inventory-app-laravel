@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateIntentoriesTable extends Migration
+class CreateInventoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateIntentoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('intentories', function (Blueprint $table) {
+        Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->string('material_name');
             $table->bigInteger('stock');
@@ -28,6 +28,6 @@ class CreateIntentoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('intentories');
+        Schema::dropIfExists('inventories');
     }
 }

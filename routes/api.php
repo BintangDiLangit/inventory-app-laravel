@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('inventory', [InventoryController::class, 'all']);
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
 
@@ -24,3 +23,9 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('user', [UserController::class, 'updateProfile']);
     Route::post('logout', [UserController::class, 'logout']);
 });
+
+Route::get('inventory/all', [InventoryController::class, 'listInventory']);
+Route::get('inventory', [InventoryController::class, 'dataInventory']);
+Route::post('inventory', [InventoryController::class, 'storeInventory']);
+Route::put('inventory/{id}', [InventoryController::class, 'updateInventory']);
+Route::delete('inventory/{id}', [InventoryController::class, 'destroyInventory']);
